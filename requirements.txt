@@ -1,0 +1,5 @@
+lxml
+sqlite3
+beautifulsoup4~=4.11.1
+psycopg2~=2.9.3
+config~=0.5.1
