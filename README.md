@@ -12,7 +12,9 @@ Author: Sana Ghani
 #### Write a Python script to find out which visitor created the most revenue. 
 #### Note: A simple print of the result to the console is sufficient.
 
-To execute the task, run `python3 Task1.py`. 
+* For this task, we used GROUP BY on visitor_id column of database and then used SUM on the revenue column to get the total revenue of each visitor. 
+* We used MAX function on the SUM(revenue) column on the above subquery to get the visitor_id with highest revenue.
+* To execute the task, run `python3 Task1.py`. 
 
 Screenshot of the result:
 ![image](https://user-images.githubusercontent.com/91886253/176982544-e817c6de-1140-4acd-8dc0-7599a8f181ae.png)
@@ -21,7 +23,10 @@ Screenshot of the result:
 #### Write a Python script to find out on which day most revenue for users who ordered via a mobile phone was created.
 #### Note: a simple print of the result to the console is sufficient.
 
-To execute the task, run `python3 Task2.py`. 
+* For this task, we used INNER JOIN on tables transactions and devices. 
+* We used GROUP BY on datetime column and filtered on device_name = 'Mobile Phone' and then used SUM on the revenue column to get the total revenue for each date.
+* We used MAX function on the SUM(revenue) column on the above subquery to get the date with the highest revenue for users who ordered via mobile phone.
+* To execute the task, run `python3 Task2.py`. 
 
 Screenshot of the result:
 ![image](https://user-images.githubusercontent.com/91886253/176982416-a50ca5a0-710d-4e09-8565-b294c6894f77.png)
@@ -32,16 +37,17 @@ Screenshot of the result:
 
 To execute the task, run `python3 Task3.py`.
 
-The output of the task is saved as a csv file inside the data folder as "devices_and_transactions.csv".
+* For this task, we used INNER JOIN on tables Devives and Transactions.
+* The output of the task is saved as a csv file inside the data folder as "devices_and_transactions.csv".
 
 ### Task 4
 #### As stated in the SQL comments the created revenue is currently stored in USD.
 #### Update the data stored in the database to have the created revenue in EUR.
 #### You can use the following resource to fetch the currency conversion rates: https://transfer.feld-m.de/fbsharing/Bzu2Zj3y.
 
-For this task, I have used the library "BeautifulSoup" to parse the XML file in Python.
+* For this task, we used the library "BeautifulSoup" to parse the XML file in Python.
 
-* First, I extracted the dates for which conversion rates are available in the XML file and stored these dates in a list.
+* First, we extracted the dates for which conversion rates are available in the XML file and stored these dates in a list.
 * For each row in the 'Transactions' table, we find the nearest date for which conversion rate is available (using the list in previous step).
 * Then we use that date's conversion rate to update the revenue in EUR in the database.
 
