@@ -6,6 +6,7 @@ Author: Sana Ghani
 * Please check requirements.txt for python library dependencies. 
 * To install, run `pip install -r requirements.txt`.
 * For Task 5, Postgres database should be installed. 
+* Use the following database: https://transfer.feld-m.de/fbsharing/4cRHU5mL.
 
 ### Task 1
 #### Write a Python script to find out which visitor created the most revenue. 
@@ -36,8 +37,7 @@ The output of the task is saved as a csv file inside the data folder as "devices
 ### Task 4
 #### As stated in the SQL comments the created revenue is currently stored in USD.
 #### Update the data stored in the database to have the created revenue in EUR.
-#### You can use the following resource to fetch the currency conversion rates:
-#### https://transfer.feld-m.de/fbsharing/Bzu2Zj3y
+#### You can use the following resource to fetch the currency conversion rates: https://transfer.feld-m.de/fbsharing/Bzu2Zj3y.
 
 For this task, I have used the library "BeautifulSoup" to parse the XML file in Python.
 
