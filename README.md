@@ -63,13 +63,13 @@ To execute the task, run `python3 Task3.py`.
 #### 
 
 * For this task, we have used PostgreSQL database.
+* The code is designed to support both "sqlite" and "postgres" database (using command line arguments).
 * SQL file is created for database migration from sqlite to Postgres. You can find the DBMigrationScriptForPostgres.sql file in the data folder.
 * To import the DBMigrationScriptForPostgres.sql, following command can be used in psql: 
   ```
   \i '<path_to_sql_file>/DBMigrationScriptForPostgres.sql'
   ```
 * The credentials for the postgres database have to be included in the "database.ini" file.
-* The code is designed to support both "sqlite" and "postgres" database (using command line arguments).
 * To execute the task with postgres data, run `python3 Task5.py postgres`.
 
 Screenshot of the result:
