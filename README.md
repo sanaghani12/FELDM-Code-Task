@@ -70,6 +70,7 @@ To execute the task, run `python3 Task3.py`.
   \i '<path_to_sql_file>/DBMigrationScriptForPostgres.sql'
   ```
 * The credentials for the postgres database have to be included in the "database.ini" file.
+
 * To execute the task with postgres data, run `python3 Task5.py postgres`.
 
 Screenshot of the result:
